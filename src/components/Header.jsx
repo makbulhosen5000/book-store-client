@@ -9,6 +9,50 @@ const Header = () => {
     const toggleMenu = () => {
       setIsOpen(!isOpen);
     };
+    const navItem = (
+      <>
+        <Link
+          to="/"
+          className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${
+            location.pathname === "/"
+              ? "bg-yellow-500 text-white"
+              : "text-gray-300"
+          }`}
+        >
+          Home
+        </Link>
+        <Link
+          to="/books"
+          className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${
+            location.pathname === "/books"
+              ? "bg-yellow-500 text-white"
+              : "text-gray-300"
+          }`}
+        >
+          Books
+        </Link>
+        <Link
+          to="/blog"
+          className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${
+            location.pathname === "/blog"
+              ? "bg-yellow-500 text-white"
+              : "text-gray-300"
+          }`}
+        >
+          Blog
+        </Link>
+        <Link
+          to="/contact"
+          className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${
+            location.pathname === "/contact"
+              ? "bg-yellow-500 text-white"
+              : "text-gray-300"
+          }`}
+        >
+          Contact
+        </Link>
+      </>
+    );
   return (
     <nav className="bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,46 +64,7 @@ const Header = () => {
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <Link
-                to="/"
-                className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${
-                  location.pathname === "/"
-                    ? "bg-yellow-500 text-white"
-                    : "text-gray-300"
-                }`}
-              >
-                Home
-              </Link>
-              <Link
-                to="/books"
-                className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${
-                  location.pathname === "/books"
-                    ? "bg-yellow-500 text-white"
-                    : "text-gray-300"
-                }`}
-              >
-                Books
-              </Link>
-              <Link
-                to="/blog"
-                className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${
-                  location.pathname === "/blog"
-                    ? "bg-yellow-500 text-white"
-                    : "text-gray-300"
-                }`}
-              >
-                Blog
-              </Link>
-              <Link
-                to="/contact"
-                className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${
-                  location.pathname === "/contact"
-                    ? "bg-yellow-500 text-white"
-                    : "text-gray-300"
-                }`}
-              >
-                Contact
-              </Link>
+              {navItem}
             </div>
           </div>
           <div className="-mr-2 flex md:hidden">
@@ -99,26 +104,7 @@ const Header = () => {
         </div>
         <div className={`${isOpen ? "block" : "hidden"} md:hidden`}>
           <div className="px-2 pt-2 pb-3 sm:px-3">
-            <Link
-              to="/"
-              className={`text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium ${
-                location.pathname === "/"
-                  ? "bg-yellow-500 text-white"
-                  : "text-gray-300"
-              }`}
-            >
-              Home
-            </Link>
-            <Link
-              to="/about"
-              className={`text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium ${
-                location.pathname === "/about"
-                  ? "bg-yellow-500 text-white"
-                  : "text-gray-300"
-              }`}
-            >
-              About
-            </Link>
+            {navItem}
           </div>
         </div>
       </div>

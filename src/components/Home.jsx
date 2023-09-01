@@ -4,7 +4,7 @@ import Lottie from "lottie-react";
 import { ShoppingCartIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
-import ChatBox from './ChatBox';
+
 
 const Home = () => {
     return (
@@ -50,7 +50,6 @@ const Home = () => {
             <Lottie animationData={reader} loop={true} />
           </div>
         </div>
-        <ChatBox/>
       </div>
     );
 };
