@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import emailjs from "@emailjs/browser";
 import {toast} from 'react-hot-toast';
+import { Helmet } from 'react-helmet-async';
 
 const Contact = () => {
 
@@ -26,6 +27,9 @@ const Contact = () => {
      };
     return (
       <div className="max-w-md mx-auto mt-8 p-6 bg-white shadow-md">
+        <Helmet>
+          <title>Book Store | Contact </title>
+        </Helmet>
         <h2 className="text-xl font-semibold mb-4">Contact Us</h2>
         <form ref={form} onSubmit={sendEmail}>
           <div className="mb-4">
