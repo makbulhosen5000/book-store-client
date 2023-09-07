@@ -1,12 +1,13 @@
-import Home from '../components/Home';
-import Books from '../components/Books';
-import { createBrowserRouter } from 'react-router-dom';
-import Main from '../Layouts/Main';
-import BookDetails from '../components/BookDetails';
-import ErrorMessage from '../error/ErrorMessage';
-import Blog from '../components/Blog';
-import Contact from '../components/Contact';
-
+import Home from "../components/Home/Home";
+import Books from "../components/Books/Books";
+import { createBrowserRouter } from "react-router-dom";
+import Main from "../Layouts/Main";
+import BookDetails from "../components/Books/BookDetails";
+import ErrorMessage from "../error/ErrorMessage";
+import Blog from "../Pages/Blog/Blog";
+import Contact from "../Pages/Contact/Contact";
+import Login from "../Pages/Login/Login";
+import Register from "../Pages/Register/Register";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -34,7 +35,15 @@ export const router = createBrowserRouter([
       },
       {
         path: "contact",
-        element: <Contact/>,
+        element: <Contact />,
+      },
+      {
+        path: "login",
+        element:<Login/>
+      },
+      {
+        path: "register",
+        element:<Register/>
       },
     ],
   },

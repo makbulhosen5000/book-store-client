@@ -1,0 +1,90 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { AiFillGoogleCircle } from "react-icons/ai";
+//import { AiFillEye } from "react-icons/ai";
+import { AiOutlineLogin } from "react-icons/ai";
+
+const Login = () => {
+
+    const handleLogin = e =>{
+        e.preventDefault();
+        const from = e.target;
+        const email = from.email.value;
+        const password = from.password.value;
+        console.log(email,password);
+    }
+
+    return (
+      <div className="bg-gray-100 min-h-screen flex items-center justify-center">
+        <div className="bg-white p-8 rounded-lg shadow-lg flex w-full md:w-3/4 lg:w-1/2">
+          {/* Left Side (Input Fields) */}
+          <div className="w-1/2 pr-8">
+            <h1 className="text-2xl font-semibold mb-4">Login</h1>
+            <form onSubmit={handleLogin}>
+              <div className="mb-4">
+                <label
+                  htmlFor="email"
+                  className="block text-gray-600 font-medium"
+                >
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500"
+                  placeholder="Your email"
+                />
+              </div>
+              <div className="mb-6">
+                <label
+                  htmlFor="password"
+                  className="block text-gray-600 font-medium"
+                >
+                  Password
+                </label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500"
+                  placeholder="Your password"
+                />
+              </div>
+              <div className="flex">
+                <button
+                  type="submit"
+                  className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300"
+                >
+                  <AiOutlineLogin size={25} />
+                </button>
+                <div className="divider divider-horizontal">OR</div>
+                <button className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300">
+                  <AiFillGoogleCircle size={25} />
+                </button>
+              </div>
+            </form>
+            <div>
+              <p className="mt-3">
+                Don't Have An Account?
+                <Link to="/register">
+                  <span className="text-blue-600"> click here</span>
+                </Link>{" "}
+              </p>
+            </div>
+          </div>
+
+          {/* Right Side (Image) */}
+          <div className="hidden md:block w-1/2">
+            <img
+              src={import.meta.env.VITE_LOGIN_IMG_URL}
+              alt="Login Image"
+              className="w-full h-auto"
+            />
+          </div>
+        </div>
+      </div>
+    );
+};
+
+export default Login;

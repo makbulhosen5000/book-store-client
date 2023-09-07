@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import Logo from '../assets/logo.png'
 import { Link, useLocation } from "react-router-dom";
+
+
 
 const Header = () => {
     const location = useLocation();
@@ -15,7 +16,7 @@ const Header = () => {
           to="/"
           className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${
             location.pathname === "/"
-              ? "bg-yellow-500 text-white"
+              ? "bg-yellow-500 text-white border-b-8 border-white"
               : "text-gray-300"
           }`}
         >
@@ -25,7 +26,7 @@ const Header = () => {
           to="/books"
           className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${
             location.pathname === "/books"
-              ? "bg-yellow-500 text-white"
+              ? "bg-yellow-500 text-white border-b-8 border-white"
               : "text-gray-300"
           }`}
         >
@@ -35,7 +36,7 @@ const Header = () => {
           to="/blog"
           className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${
             location.pathname === "/blog"
-              ? "bg-yellow-500 text-white"
+              ? "bg-yellow-500 text-white border-b-8 border-white"
               : "text-gray-300"
           }`}
         >
@@ -45,7 +46,7 @@ const Header = () => {
           to="/contact"
           className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${
             location.pathname === "/contact"
-              ? "bg-yellow-500 text-white"
+              ? "bg-yellow-500 text-white border-b-8 border-white"
               : "text-gray-300"
           }`}
         >
@@ -59,13 +60,15 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <Link to="/">
-              <img className="h-8 w-8" src={Logo} alt="Logo" />
+              <img
+                className="h-8 w-8"
+                src="https://i.ibb.co/FsXMPPJ/logo.png"
+                alt="Logo"
+              />
             </Link>
           </div>
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              {navItem}
-            </div>
+            <div className="ml-10 flex items-baseline space-x-4">{navItem}</div>
           </div>
           <div className="-mr-2 flex md:hidden">
             <button
@@ -103,9 +106,7 @@ const Header = () => {
           </div>
         </div>
         <div className={`${isOpen ? "block" : "hidden"} md:hidden`}>
-          <div className="px-2 pt-2 pb-3 sm:px-3">
-            {navItem}
-          </div>
+          <div className="px-2 pt-2 pb-3 sm:px-3">{navItem}</div>
         </div>
       </div>
     </nav>

@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from '../components/Header';
+import Header from '../Shared/Header/Header';
 import { Outlet } from 'react-router-dom';
-import Footer from '../components/Footer';
-import ChatBox from '../components/ChatBox';
+import Footer from '../Shared/Footer/Footer';
+import ChatBox from '../components/Messenger/ChatBox';
 
 const Main = () => {
     return (

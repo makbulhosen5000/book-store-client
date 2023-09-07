@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigation } from 'react-router-dom';
-import blogs from '../../public/question.json';
-import LoadingMessage from './LoadingMessage';
+import blogs from '../../../public/question.json';
+import LoadingMessage from '../../components/Loader/LoadingMessage';
 import { Helmet } from 'react-helmet-async';
 
 

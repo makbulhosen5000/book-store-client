@@ -26,7 +26,7 @@
   {
     "_id": "5",
     "question": "What is Closure?",
-    "answer": "A function or combination of functions until complete when the code is run is called a closure কোড রান হওয়ার সময় কমপ্লিট হওয়া পর্যন্ত একটি ফাংশন বা ফাংশনের সমন্বয়কে ক্লোজার বলা হয় a closure giving access to inner function from outer function's scope.ক্লোজার হচ্ছে outer ফাংশনের scope থেকে inner ফাংশনে অ্যাক্সেস দেয়।",
+    "answer": "When an inner function retruns another function and a close relationship is created between the two function, it is called a closure. যখন একটি ফাংশনের  ভিতরে ইনার আরেকটা ফাংশন retrun করে  এবং এই দুইটার মধ্যে close একটা সম্পর্ক তৈরী  হয় এটাকে closser বলা হয়।",
     "category": "javascript"
   },
   {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useLoaderData, useNavigation } from 'react-router-dom';
-import LoadingMessage from './LoadingMessage';
+import LoadingMessage from '../Loader/LoadingMessage';
 import { Helmet } from 'react-helmet-async';
 
 const BookDetails = () => {
