@@ -1,18 +1,84 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AiFillGoogleCircle } from "react-icons/ai";
 import { FaRegistered } from "react-icons/fa";
+import { useContext } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
+import { toast } from "react-hot-toast";
+import { saveUser } from "../../api/auth";
 const Register = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+  const {
+    loading,
+    setLoading,
+    createUser,
+    updateUserProfile,
+    signInWithGoogle,
+  } = useContext(AuthContext);
+
+   const handleGoogleSignIn = () => {
+     signInWithGoogle()
+       .then((result) => {
+         console.log(result.user);
+         //save user to DB //src/api/auth.js
+         saveUser(result.user);
+         navigate(from, { replace: true });
+       })
+       .catch((err) => {
+         setLoading(false);
+         console.log(err.message);
+         toast.error(err.message);
+       });
+   };
+
   const handleRegister = (e) => {
     e.preventDefault();
     const from = e.target;
     const name = from.name.value;
+    const email = from.email.value;
+    const password = from.password.value;
     const image = from.image.files[0];
     const formData = new FormData();
     formData.append("image",image);
-    const email = from.email.value;
-    const password = from.password.value;
-    console.log(name,email, password, image);
+     const url = `https://api.imgbb.com/1/upload?key=${
+       import.meta.env.VITE_IMGBB_KEY
+     }`;
+     fetch(url, {
+       method: "POST",
+       body: formData,
+     })
+       .then((res) => res.json())
+       .then((imageData) => {
+         const imageUrl = imageData.data.display_url;
+         createUser(email, password)
+           .then((result) => {
+             console.log(result.user);
+             updateUserProfile(name, imageUrl)
+               .then(() => {
+                 toast.success("SignUp successfully");
+                 //save user to DB //api/auth.js
+                 saveUser(result.user);
+               })
+               .catch((err) => {
+                 setLoading(false);
+                 console.log(err.message);
+                 toast.error(err.message);
+               });
+           })
+           .catch((err) => {
+             setLoading(false);
+             console.log(err.message);
+             toast.error(err.message);
+           });
+       })
+       .catch((err) => {
+         setLoading(false);
+         console.log(err.message);
+         toast.error(err.message);
+       });
+ 
   };
 
   return (
@@ -23,30 +89,13 @@ const Register = () => {
           <h1 className="text-2xl font-semibold mb-4">Register</h1>
           <form onSubmit={handleRegister}>
             <div className="mb-6">
-              <label
-                htmlFor="name"
-                className="block text-gray-600 font-medium"
-              >
+              <label htmlFor="name" className="block text-gray-600 font-medium">
                 Name
               </label>
               <input
                 type="text"
                 id="name"
                 name="name"
-                className="w-full px-4 py-2 border rounded-md focus:outline-none"
-              />
-            </div>
-            <div className="mb-6">
-              <label
-                htmlFor="Image"
-                className="block text-gray-600 font-medium"
-              >
-                Image
-              </label>
-              <input
-                type="file"
-                id="image"
-                name="image"
                 className="w-full px-4 py-2 border rounded-md focus:outline-none"
               />
             </div>
@@ -80,7 +129,20 @@ const Register = () => {
                 placeholder="Your password"
               />
             </div>
-
+            <div className="mb-6">
+              <label
+                htmlFor="Image"
+                className="block text-gray-600 font-medium"
+              >
+                Image
+              </label>
+              <input
+                type="file"
+                id="image"
+                name="image"
+                className="w-full px-4 py-2 border rounded-md focus:outline-none"
+              />
+            </div>
             <div className="flex">
               <button
                 type="submit"

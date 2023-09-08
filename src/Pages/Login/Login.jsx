@@ -64,9 +64,15 @@ const Login = () => {
                 </button>
               </div>
             </form>
-            <div>
+            <div className=''>
               <p className="mt-3">
                 Don't Have An Account?
+                <Link to="/register">
+                  <span className="text-blue-600"> click here</span>
+                </Link>{" "}
+              </p>
+              <p className="mt-3">
+                Forget Password?
                 <Link to="/register">
                   <span className="text-blue-600"> click here</span>
                 </Link>{" "}

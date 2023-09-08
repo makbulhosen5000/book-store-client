@@ -9,7 +9,7 @@ const Slider = () => {
     <div>
       <Swiper
         scrollbar={{
-          hide: true,
+          type: "progressbar",
         }}
         modules={[Scrollbar]}
         className="mySwiper"
