@@ -1,7 +1,7 @@
 import React from 'react';
 import reader from '../../assets/94115-reading-boy.json';
 import Lottie from "lottie-react";
-import { ShoppingCartIcon } from "@heroicons/react/24/solid";
+import { CalculatorIcon, ShoppingCartIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
 
@@ -33,6 +33,12 @@ const BookHome = () => {
             <div className="inline-flex items-center justify-center w-full h-full">
               <p className="mr-3">Visit Store</p>
               <ShoppingCartIcon className="w-5 text-gray-100" />
+            </div>
+          </Link>
+          <Link to="/age-calculate" className="btn md:w-auto md:mr-4">
+            <div className="inline-flex items-center justify-center w-full h-full">
+              <p className="mr-3">Age Calculator</p>
+              <CalculatorIcon className="w-5 text-gray-100" />
             </div>
           </Link>
           <Link

@@ -14,7 +14,7 @@ const BookDetails = () => {
     return (
       <div className="flex place-items-center justify-center align-items-center h-screen">
         <Helmet>
-          <title>Book Store | Details </title>
+          <title>Book Details | Book Store </title>
         </Helmet>
         <div>
           <img src={data?.image} alt="" />

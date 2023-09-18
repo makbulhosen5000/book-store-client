@@ -4,7 +4,6 @@ import BookService from './BookService';
 const BookServices = () => {
     //modules 69.6
     const [services,setServices] = useState([]);
-    console.log(services);
     useEffect(()=>{
         fetch('services.json')
         .then(res=>res.json())

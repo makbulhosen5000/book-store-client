@@ -1,15 +1,19 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../provider/AuthProvider";
 
 const Avatar = () => {
+  const {user} = useContext(AuthContext);
+
     
-   const userImg = "https://i.ibb.co/yQvmGhM/placeholder.jpg";
+   const avatarUrl = "https://i.ibb.co/yQvmGhM/placeholder.jpg";
+   
   return (
     <div>
       <Link to="/">
         <img
           className="rounded-full"
-          src={userImg}
+          src={user && user?.photoURL ? user?.photo:avatarUrl}
           alt="profile"
           width="30"
           height="30"

@@ -8,6 +8,10 @@ import Blog from "../Pages/Blog/Blog";
 import Contact from "../Pages/Contact/Contact";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import AgeCalculate from "../components/AgeCalculate/AgeCalculate";
+import JsBlog from "../Pages/Blog/js/JsBlog";
+import PhpBlog from "../Pages/Blog/php/PhpBlog";
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -38,12 +42,24 @@ export const router = createBrowserRouter([
         element: <Contact />,
       },
       {
+        path: "js-question",
+        element: <JsBlog />,
+      },
+      {
+        path: "php-question",
+        element: <PhpBlog />,
+      },
+      {
+        path: "age-calculate",
+        element: <AgeCalculate />,
+      },
+      {
         path: "login",
-        element:<Login/>
+        element: <Login />,
       },
       {
         path: "register",
-        element:<Register/>
+        element: <Register />,
       },
     ],
   },

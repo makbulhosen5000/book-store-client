@@ -1,18 +1,68 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useRef } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AiFillGoogleCircle } from "react-icons/ai";
 //import { AiFillEye } from "react-icons/ai";
 import { AiOutlineLogin } from "react-icons/ai";
+import toast from 'react-hot-toast';
+import { saveUser } from '../../api/auth';
+import { AuthContext } from '../../provider/AuthProvider';
 
 const Login = () => {
 
-    const handleLogin = e =>{
-        e.preventDefault();
-        const from = e.target;
-        const email = from.email.value;
-        const password = from.password.value;
-        console.log(email,password);
-    }
+    const emailRef = useRef();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
+    const { loading, setLoading, signIn, signInWithGoogle, resetPassword } =
+      useContext(AuthContext);
+
+    const handleGoogleSignIn = () => {
+      signInWithGoogle()
+        .then((result) => {
+          console.log(result.user);
+          //save user to DB //api/auth.js
+          saveUser(result.user);
+          navigate(from, { replace: true });
+        })
+        .catch((err) => {
+          setLoading(false);
+          console.log(err.message);
+          toast.error(err.message);
+        });
+    };
+
+    const handleLoginSubmit = (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const email = form.email.value;
+      const password = form.password.value;
+      console.log(email, password);
+      signIn(email, password)
+        .then((result) => {
+          console.log(result.user);
+          navigate(from, { replace: true });
+        })
+        .catch((err) => {
+          setLoading(false);
+          console.log(err.message);
+          toast.error(err.message);
+        });
+    };
+
+    const handleReset = () => {
+      const email = emailRef.current.value;
+      resetPassword(email)
+        .then(() => {
+          toast.success("Please check your email for password reset");
+          setLoading(false);
+        })
+        .catch((err) => {
+          setLoading(false);
+          console.log(err.message);
+          toast.error(err.message);
+        });
+    };
+
 
     return (
       <div className="bg-gray-100 min-h-screen flex items-center justify-center">
@@ -20,7 +70,7 @@ const Login = () => {
           {/* Left Side (Input Fields) */}
           <div className="w-1/2 pr-8">
             <h1 className="text-2xl font-semibold mb-4">Login</h1>
-            <form onSubmit={handleLogin}>
+            <form onSubmit={handleLoginSubmit}>
               <div className="mb-4">
                 <label
                   htmlFor="email"
@@ -31,6 +81,7 @@ const Login = () => {
                 <input
                   type="email"
                   id="email"
+                  ref={emailRef}
                   name="email"
                   className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500"
                   placeholder="Your email"
@@ -59,12 +110,15 @@ const Login = () => {
                   <AiOutlineLogin size={25} />
                 </button>
                 <div className="divider divider-horizontal">OR</div>
-                <button className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300">
+                <button
+                  onClick={handleGoogleSignIn}
+                  className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300"
+                >
                   <AiFillGoogleCircle size={25} />
                 </button>
               </div>
             </form>
-            <div className=''>
+            <div className="">
               <p className="mt-3">
                 Don't Have An Account?
                 <Link to="/register">
@@ -73,7 +127,7 @@ const Login = () => {
               </p>
               <p className="mt-3">
                 Forget Password?
-                <Link to="/register">
+                <Link onClick={handleReset} to="">
                   <span className="text-blue-600"> click here</span>
                 </Link>{" "}
               </p>

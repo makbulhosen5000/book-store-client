@@ -1,0 +1,189 @@
+[
+  {
+    "_id": "0",
+    "question": " global and Block scope and Functional/Local scope?",
+    "answer": "We can access global variable from anywhere.and We can't access functional/local Scope from outside of the function/loop only we can access inside the function/loop. block scope resides in a block, for Example, { let name = 'akash' } ",
+    "category": ""
+  },
+  {
+    "_id": "1",
+    "question": "What is JavaScript?",
+    "answer": "Javascript is a scripting language. It is object based, open source cross-platform and lightweight programming language. It works directly with browser.",
+    "category": "javascript"
+  },
+  {
+    "_id": "2",
+    "question": "List some of the advantages of JavaScript?",
+    "answer": "Interactivity is so high, Server interaction is less, Interfaces are so richer,Feedback to the visitors is immediate",
+    "category": "javascript"
+  },
+  {
+    "_id": "3",
+    "question": " List some of the disadvantages of JavaScript?",
+    "answer": "no support for multiprocessing,Reading and writing of files is not allowed,No Support for multithreading,No support for networking Applications",
+    "category": "javascript"
+  },
+  {
+    "_id": "4",
+    "question": "What is  Even Loop?",
+    "answer": "The Event Loop has one simple job — to monitor the Call Stack and the Callback Queue. If the Call Stack is empty, it will take the first event from the queue and will push it to the Call Stack.Each event is a function callback.",
+    "category": "javascript"
+  },
+  {
+    "_id": "5",
+    "question": "What is Closure?",
+    "answer": "When an inner function retruns another function and a close relationship is created between the two function, it is called a closure. যখন একটি ফাংশনের  ভিতরে ইনার আরেকটা ফাংশন retrun করে  এবং এই দুইটার মধ্যে close একটা সম্পর্ক তৈরী  হয় এটাকে closser বলা হয়।",
+    "category": "javascript"
+  },
+  {
+    "_id": "6",
+    "question": "What is Scope?",
+    "answer": "Scope determines the accessibility of variables, objects, and functions from different parts of the code",
+    "category": "javascript"
+  },
+  {
+    "_id": "7",
+    "question": "What is Promise?",
+    "answer": "Promise, in general terms, deals with the predicted or intended outcome to occur at a certain point in time. Promises can have three states - running (the operation is not yet completed), completed (the operation completed successfully) and failed (the operation failed).প্রমিস,একটি সাধারণ কথায় পূর্বাভাস বা সংকল্পনার নির্দিষ্ট সময়ে মধ্যে প্রাপ্ত ফলাফল নিয়ে কাজ করে। প্রমিস তিনটি অবস্থা হতে পারে - চলমান (অপারেশনটি এখনও সম্পন্ন হয়নি), সম্পন্ন (অপারেশনটি সফলভাবে সম্পন্ন হয়েছে) এবং ব্যর্থ (অপারেশনটি ব্যর্থ হয়েছে)।",
+    "category": "javascript"
+  },
+  {
+    "_id": "8",
+    "question": "What is Hoisting?",
+    "answer": "Hoisting is the process by which JavaScript's compiler moves declarations of all variables to the beginning of a file.That is, if you use a variable without declaring it, JavaScript supports it and the code will run correctly.হোইস্টিং হল এমন একটি প্রক্রিয়া যেখানে জাভাস্ক্রিপ্ট এর কম্পাইলার একটি ফাইলের শুরুতে সমস্ত ভেরিয়েবলগুলির ডেক্লেয়ারেশনগুলি উপরে উঠিয়ে নিয়ে যায়। অর্থাৎ,একটি ভেরিয়েবল ডিক্লেয়ার না করেই তাকে ব্যবহার করলেও জাভাস্ক্রিপ্ট তা সমর্থন করে এবং কোডটি সঠিকভাবে রান করবে।",
+    "category": "javascript"
+  },
+  {
+    "_id": "9",
+    "question": "What is asynchronous?",
+    "answer": "Asynchronous is a method or process where one operation is started without waiting for another operation to finish.অ্যাসিঙ্ক্রোনাস হল এমন একটি পদ্ধতি বা প্রক্রিয়া যেখানে একটি অপারেশনের শেষ হওয়ার অপেক্ষা না করে আরেকটি অপারেশন শুরু করা হয়।",
+    "category": "javascript"
+  },
+  {
+    "_id": "10",
+    "question": "What is synchronous?",
+    "answer": "Synchronous is a method or process where one operation starts after another operation has finished.সিঙ্ক্রোনাস হল এমন একটি পদ্ধতি বা প্রক্রিয়া যেখানে একটি অপারেশন শেষ হওয়ার পরে আরেকটি অপারেশন শুরু করে",
+    "category": "javascript"
+  },
+  {
+    "_id": "11",
+    "question": "What is callback?",
+    "answer": "ক্যালব্যাক হল একটি ফাংশন যা অন্য ফাংশনের প্রথম আর্গুমেন্ট হিসেবে পাঠানো হয়। এই ফাংশনটি পরে কল করা হয়, যখন মূল ফাংশনের কাজ সম্পন্ন হয়। ক্যালব্যাক ব্যবহার করে একটি ফাংশনের নির্দিষ্ট সময়ে নির্দিষ্ট কাজের জন্য প্রেরণ করা হয়।",
+    "category": "javascript"
+  },
+  {
+    "_id": "12",
+    "question": "What is setIntervel?",
+    "answer": "setIntervel এর কাজ হচ্ছে নিদিষ্ট সময়য়ের পরপর function টা  run হবে এই ভাবে  continue চলতে থাকবে । clearIntervel ব্যাবহার করে setIntervel stop  করতে হবে.",
+    "category": "javascript"
+  },
+  {
+    "_id": "10",
+    "question": "What is setTimeOut?",
+    "answer": "setTimeOut কাজ হচ্ছে নিদিষ্ট সময়য়ের পর setTimeOut function টা stop হয়ে যাবে",
+    "category": "javascript"
+  },
+  {
+    "_id": "11",
+    "question": "What is Lifecycle?",
+    "answer": " React every component has lifecycle which monitor and manipulate by 3 phases.1. Mounting 2.unmonting 3. updating.React এর প্রতিটি component এর একটি lifecycle রয়েছে যা  তিনটি পর্যায়ে  monitor এবং manipulate করে। তিনটি (phases )পর্যায় হল: Mounting, Unmounting and Updating",
+    "category": "React"
+  },
+  {
+    "_id": "12",
+    "question": "what is React?",
+    "answer": "React is open source and  component based  front-end  javascript library. It was developed by Facebook in 2011.Jordan Walke developed it. He is Software Engineer of facebook.It is developed for single page application",
+    "category": "React"
+  },
+  {
+    "_id": "13",
+    "question": "What are the features of React?",
+    "answer": "jsx,component,Vertual Dom,Simplicity,Performantce",
+    "category": "React"
+  },
+  {
+    "_id": "14",
+    "question": "What is JSX?",
+    "answer": " JSX is javascript XML.  It is React extension which is allow writing javascript that similar to HTML . XML makes HTML file easy to understand.JSX হলো JavaScript XML। এটি React এক্সটেনশন, যা জাভাস্ক্রিপ্ট লিখতে দেয় যেটা HTML এর মতো। XML এর ব্যবহারের ফলে HTML ফাইলগুলো সহজে বোঝা যায়।",
+    "category": "React"
+  },
+  {
+    "_id": "15",
+    "question": "Why can't browsers read JSX?",
+    "answer": " Browser can not reed directly JSX. Browser can understand javascript  object.We need to transform the JSX file into a javaScript object  by using Babel and then pass it to the browser.",
+    "category": "React"
+  },
+  {
+    "_id": "16",
+    "question": "What is DOM?",
+    "answer": " DOM is Document Object Model. DOM is progrmming interface, which can be change web page content.",
+    "category": "React"
+  },
+  {
+    "_id": "17",
+    "question": "What do you understand by Virtual DOM?",
+    "answer": " A Virtual DOM is a lightweight JavaScript object which is an in-memory representation of real DOM.When we make some change the virtual DOM only changes the specific object in the dom instead all of the objects. Virtual DOM uses for Developer Experience.ভার্চুয়াল ডম (Virtual DOM) হলো একটি হালকা জাভাস্ক্রিপ্ট অবজেক্ট, যা মূল ডমের মেমোরিতে একটি প্রতিষ্ঠান প্রতিনিধিত্ব করে। আমরা কোনো পরিবর্তন করলে, ভার্চুয়াল ডম মাত্র মূল ডমের নির্দিষ্ট অবজেক্টগুলিতে পরিবর্তন করে, সমস্ত অবজেক্টগুলিতে পরিবর্তন করা হয় না। ভার্চুয়াল ডম ডেভেলপারের অভিজ্ঞতা উন্নত করার জন্য ব্যবহৃত হয়।",
+    "category": "React"
+  },
+  {
+    "_id": "18",
+    "question": "What is Higher Order Component?",
+    "answer": "higher order component is a function. It takes a paramiter as a componenet and return a new component/updated component. higher order function like spiderman.",
+    "category": "React"
+  },
+  {
+    "_id": "19",
+    "question": "What is useMemo?",
+    "answer": "useMemo and useCallback hook use for performance optimization",
+    "category": "React"
+  },
+  {
+    "_id": "20",
+    "question": "What is Hook?",
+    "answer": "React hook is a function which is uses for manage state by functional component without class component.Hook provide more efficient rather than class component",
+    "category": "React"
+  },
+  {
+    "_id": "21",
+    "question": "What is fragments?",
+    "answer": "React Fragment is used for return multiple elementsts.It is faster then div. Div consume more memory but fragments take less memory. Fragment doesn’t create extra nood.",
+    "category": "React"
+  },
+  {
+    "_id": "22",
+    "question": "What is Element?",
+    "answer": "Element is a plain javascript object and it is immutable. We can not apply any methods on elements. It only holds information about the component type its properties, and any child elements inside it.",
+    "category": "React"
+  },
+  {
+    "_id": "23",
+    "question": "What is React Router?",
+    "answer": "same type of many state can declared by only on reducer,useReducer takes 2 paramiters one is reducer function another one is initialState,reducer take 2 paramiters one is state another one is action.",
+    "category": "React"
+  },
+  {
+    "_id": "24",
+    "question": "What is Contenxt Api?",
+    "answer": "We can pass value by props for those we follow props drilling system but it is difficult because it goes step by step but if we use context api we don’t need follow props drilling. Firsty we will create context.Secondly we will use it by useContext from any where.",
+    "category": "React"
+  },
+  {
+    "_id": "25",
+    "question": "What is useRef?",
+    "answer": "we can access dom element directly by useRef.if I use useRef no need to use state or onChange.we can't controll useRef that's why we told it's uncontroll component.if I use directly DOM by useRef overall process will be slow so avoid it.If we need only value and next time this value no need to use that time useRef can use",
+    "category": "React"
+  },
+  {
+    "_id": "26",
+    "question": "What is the purpose of Node.js?",
+    "answer": " Distributed systems,Real-time web applications,General purpose applications,Network Application",
+    "category": "Node"
+  },
+  {
+    "_id": "27",
+    "question": " What is the difference between MongoDB and MySQL?",
+    "answer": "  Although MongoDB and MySQL both are free and open source databases, there is a lot of difference between them in the term of data representation, relationship, transaction, querying data, schema design and definition, performance speed, normalization and many more. To compare MySQL with MongoDB is like a comparison between Relational and Non-relational databases.",
+    "category": "MongoDB"
+  }
+
+]

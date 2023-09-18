@@ -35,11 +35,11 @@ const Register = () => {
 
   const handleRegister = (e) => {
     e.preventDefault();
-    const from = e.target;
-    const name = from.name.value;
-    const email = from.email.value;
-    const password = from.password.value;
-    const image = from.image.files[0];
+    const form = e.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    const image = form.image.files[0];
     const formData = new FormData();
     formData.append("image",image);
      const url = `https://api.imgbb.com/1/upload?key=${
@@ -51,7 +51,8 @@ const Register = () => {
      })
        .then((res) => res.json())
        .then((imageData) => {
-         const imageUrl = imageData.data.display_url;
+         const imageUrl = imageData.display_url;
+         
          createUser(email, password)
            .then((result) => {
              console.log(result.user);
@@ -140,6 +141,7 @@ const Register = () => {
                 type="file"
                 id="image"
                 name="image"
+                accept="image/*"
                 className="w-full px-4 py-2 border rounded-md focus:outline-none"
               />
             </div>
@@ -151,7 +153,10 @@ const Register = () => {
                 <FaRegistered size={25} />
               </button>
               <div className="divider divider-horizontal">OR</div>
-              <button className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300">
+              <button
+                onClick={handleGoogleSignIn}
+                className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300"
+              >
                 <AiFillGoogleCircle size={25} />
               </button>
             </div>

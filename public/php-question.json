@@ -1,0 +1,94 @@
+[
+  {
+    "_id": "1",
+    "question": "What is Global/local/static scope",
+    "answer": "We can access global variable from anywhere and we can't access local variable outside the function/loop only we can access inside the function/loop and Static variable store/save last value of variable.",
+    "category": "php"
+  },
+  {
+    "_id": "2",
+    "question": "What is composer?",
+    "answer": "composer হচ্ছে পিএইচপির একটি অ্যাপ্লিকেশন প্যাকেজ ম্যানেজার। এটি পিএইচপি সফটওয়্যার dependencies and libraries প্রদান করে।",
+    "category": "laravel"
+  },
+  {
+    "_id": "3",
+    "question": "What is HTTP middleware?",
+    "answer": "HTTP মিডলওয়্যার হল HTTP requests করার একটি কৌশল।  মিডলওয়্যার  checks application user  authenticated কিনা।",
+    "category": "laravel"
+  },
+  {
+    "_id": "4",
+    "question": "What is aggregates methods of query builder?",
+    "answer": "Aggregates methods of query builder are: 1) max(), 2) min(), 3) sum(), 4) avg(), and 5) count().",
+    "category": "laravel"
+  },
+  {
+    "_id": "5",
+    "question": "What do you mean by bundles?",
+    "answer": "লারাভেলে, বান্ডেলগুলিকে প্যাকেজ হিসাবে উল্লেখ করা হয়। এই প্যাকেজগুলি লারাভেলের কার্যকারিতা বাড়াতে ব্যবহৃত হয়। একটি প্যাকেজে ভিউ, কনফিগারেশন, মাইগ্রেশন, রুট এবং টাস্ক থাকতে পারে।",
+    "category": "laravel"
+  },
+  {
+    "_id": "6",
+    "question": "What is a Controller?",
+    "answer": "controller  হল MVC(MVModel-View-Controller) আর্কিটেকচার যা Laravel এর উপর ভিত্তি করে তৈরি। এটি ভিউ এবং মডেলের মধ্যে একটি নির্দেশক হিসাবে কাজ করে।",
+    "category": "laravel"
+  },
+  {
+    "_id": "7",
+    "question": " Explain reverse routing in Laravel?",
+    "answer": "রিভার্স রাউটিং হল একটি  method যেটি  symbol বা নামের উপর ভিত্তি করেে URL তৈরির একটি পদ্ধতি।",
+    "category": "laravel"
+  },
+  {
+    "_id": "8",
+    "question": " Explain traits in Laravel?",
+    "answer": "Laravel traits হল ফাংশনের একটি group  যা  অন্য  class মধ্যে include  করা abstract class মত। আপনি সরাসরি তাত্ক্ষণিক করতে পারবেন না, তবে এর পদ্ধতিগুলি কনক্রিট ক্লাসে ব্যবহার করা যেতে পারে।",
+    "category": "laravel"
+  },
+  {
+    "_id": "9",
+    "question": "How will you register service providers?",
+    "answer": "Register service providers এর  config/app.php কনফিগারেশন ফাইলে provide করা হয় যেখানে একটি Array রয়েছে যেখানে  service provider class name উল্লেখ করা হয়।",
+    "category": "laravel"
+  },
+  {
+    "_id": "10",
+    "question": "Where will you define Laravel's Facades?",
+    "answer": "All Laravel facades defined করা হয় IlluminateSupportFacades namespace.",
+    "category": "laravel"
+  },
+  {
+    "_id": "11",
+    "question": "Explain dependency injection and their types?",
+    "answer": "এটি একটি technique যেটি এক object থেকে  অন্য object dependent করে . There are three types of dependency injection: 1) Constructor injection, 2) setter injection, and 3) interface injection.",
+    "category": "laravel"
+  },
+  {
+    "_id": "12",
+    "question": " Explain PHP artisan?",
+    "answer": "artisan is লারাভেলের একটি কমান্ড-লাইন টুল। এটি এমন কমান্ড সরবরাহ করে যা আপনাকে কোনও ঝামেলা ছাড়াই লারাভেল অ্যাপ্লিকেশন তৈরি করতে সহায়তা করে।",
+    "category": "laravel"
+  },
+  {
+    "_id": "10",
+    "question": "What is app service provider/container?",
+    "answer": "Service Provider হল project এর whole Service গুলি load করে, আর Service Container হল Service গুলিকে bind বা register করা। যদি আরো সহজ করে বলি তাহলে Service Provider মুলত brain বা engine আর Service Container হল এর body",
+    "category": "laravel"
+  },
+  {
+    "_id": "11",
+    "question": " What is laravel pacades?",
+    "answer": " Laravel facade  হল একটি ক্লাস যা একটি complex  লাইব্রেরীকে wrapping করে আরও সহজতম এবং পাঠযোগ্য ইন্টারফেস প্রদান করে।",
+    "category": "React"
+  },
+  {
+    "_id": "12",
+    "question": "What is service container in Laravel?",
+    "answer": " Laravel service container হচ্চে একটা  powerful tool, class dependencies গুলিকে  manag করার জন্য এটি একটি dependency injection",
+    "category": "React"
+  }
+  
+  
+]

@@ -28,7 +28,7 @@ const Contact = () => {
     return (
       <div className="max-w-md mx-auto mt-8 p-6 bg-white shadow-md">
         <Helmet>
-          <title>Book Store | Contact </title>
+          <title>Contact | Book Store </title>
         </Helmet>
         <h2 className="text-xl font-semibold mb-4">Contact Us</h2>
         <form ref={form} onSubmit={sendEmail}>
