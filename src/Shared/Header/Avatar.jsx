@@ -13,7 +13,7 @@ const Avatar = () => {
       <Link to="/">
         <img
           className="rounded-full"
-          src={user && user?.photoURL ? user?.photo:avatarUrl}
+          src={user && user?.photo ? user?.photo : avatarUrl}
           alt="profile"
           width="30"
           height="30"

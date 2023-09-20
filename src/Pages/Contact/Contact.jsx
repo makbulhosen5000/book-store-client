@@ -26,11 +26,11 @@ const Contact = () => {
          );
      };
     return (
-      <div className="max-w-md mx-auto mt-8 p-6 bg-white shadow-md">
+      <div className="max-w-md mx-auto my-8 p-6 bg-white shadow-md">
         <Helmet>
           <title>Contact | Book Store </title>
         </Helmet>
-        <h2 className="text-xl font-semibold mb-4">Contact Us</h2>
+        <h2 className="text-xl font-semibold mb-4 text-yellow-500">Don't feel hesitate to Catch Me</h2>
         <form ref={form} onSubmit={sendEmail}>
           <div className="mb-4">
             <label

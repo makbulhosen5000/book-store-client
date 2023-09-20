@@ -6,6 +6,30 @@
     "category": "php"
   },
   {
+    "_id": "11",
+    "question": "What is callback function?",
+    "answer": "যেকোন function কে যখন অন্য একটি funtion এর parameter হিসেবে পাঠিয়ে তার মধ্যে call করা হয় তখন parameter হিসেবে পাঠানো function টিকে callback function বলে।",
+    "category": "php"
+  },
+  {
+    "_id": "11",
+    "question": "What is Recursion/Recursive?",
+    "answer": "when a function calls itself is called recursive function and the process of calling itself is called Recursion.যে ফাংশন নিজে নিজে কল দেয় তাকে বলে রিকারসিভ ফাংশন আর  নিজে নিজে কল দেয়ার প্রসেসটাকে বলে Recursion|many line code we can short only few line by Recursive but If we any mistake in recursion function whole process will be hang.",
+    "category": "php"
+  },
+  {
+    "_id": "11",
+    "question": "What is Factorial?",
+    "answer": "Factorial !4 = 4 * 3 * 2* (যেকোন সংখ্যা থেকে শুরু করে 1 পর্যন্ত তার গুণফল বের করা।",
+    "category": "php"
+  },
+  {
+    "_id": "11",
+    "question": "What is Fibonacci?",
+    "answer": " 0 1 1 2 3 5 continue, for example 0 + 1 = 1, 1+1 = 2, 2+2 = 4, 4+3 = 7, 7+5 = 12 ",
+    "category": "php"
+  },
+  {
     "_id": "2",
     "question": "What is composer?",
     "answer": "composer হচ্ছে পিএইচপির একটি অ্যাপ্লিকেশন প্যাকেজ ম্যানেজার। এটি পিএইচপি সফটওয়্যার dependencies and libraries প্রদান করে।",
@@ -89,6 +113,4 @@
     "answer": " Laravel service container হচ্চে একটা  powerful tool, class dependencies গুলিকে  manag করার জন্য এটি একটি dependency injection",
     "category": "React"
   }
-  
-  
 ]

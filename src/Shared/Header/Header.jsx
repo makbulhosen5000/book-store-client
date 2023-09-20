@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Dropdown from "./Dropdown";
 
 
 
 const Header = () => {
+
     const location = useLocation();
     const [isOpen, setIsOpen] = useState(false);
 
@@ -62,11 +63,12 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <Link to="/">
-              <img
-                className="h-8 w-8"
-                src="https://i.ibb.co/FsXMPPJ/logo.png"
-                alt="Logo"
-              />
+                <img
+                  className="h-8 w-8"
+                  src="https://i.ibb.co/FsXMPPJ/logo.png"
+                  alt="Logo"
+                />
+            
             </Link>
           </div>
           <div className="hidden md:block">

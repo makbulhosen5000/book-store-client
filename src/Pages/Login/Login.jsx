@@ -85,12 +85,14 @@ const Login = () => {
                   name="email"
                   className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500"
                   placeholder="Your email"
+                  required
                 />
               </div>
               <div className="mb-6">
                 <label
                   htmlFor="password"
                   className="block text-gray-600 font-medium"
+                  required
                 >
                   Password
                 </label>

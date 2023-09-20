@@ -12,7 +12,7 @@ const BookHome = () => {
       {/* Text Content */}
       <div className="mb-10 lg:max-w-lg  lg:pr-5 lg:mb-0">
         <Helmet>
-          <title>Book Store | Home </title>
+          <title>Home | Book Store </title>
         </Helmet>
         <div className="max-w-xl mb-6 lg:mt-8">
           <div>

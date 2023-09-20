@@ -98,6 +98,7 @@ const Register = () => {
                 id="name"
                 name="name"
                 className="w-full px-4 py-2 border rounded-md focus:outline-none"
+                required
               />
             </div>
             <div className="mb-4">
@@ -113,6 +114,7 @@ const Register = () => {
                 name="email"
                 className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500"
                 placeholder="Your email"
+                required
               />
             </div>
             <div className="mb-6">
@@ -128,6 +130,7 @@ const Register = () => {
                 name="password"
                 className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500"
                 placeholder="Your password"
+                required
               />
             </div>
             <div className="mb-6">
@@ -143,6 +146,7 @@ const Register = () => {
                 name="image"
                 accept="image/*"
                 className="w-full px-4 py-2 border rounded-md focus:outline-none"
+                required
               />
             </div>
             <div className="flex">
