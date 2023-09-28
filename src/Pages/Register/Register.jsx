@@ -23,7 +23,8 @@ const Register = () => {
        .then((result) => {
          console.log(result.user);
          //save user to DB //src/api/auth.js
-         saveUser(result.user);
+         //saveUser(result.user);
+         toast.success("SignUp successfully");
          navigate(from, { replace: true });
        })
        .catch((err) => {
@@ -51,8 +52,8 @@ const Register = () => {
      })
        .then((res) => res.json())
        .then((imageData) => {
-         const imageUrl = imageData.display_url;
-         
+         const imageUrl = imageData.data.display_url;
+         console.log(imageData);
          createUser(email, password)
            .then((result) => {
              console.log(result.user);
@@ -60,7 +61,8 @@ const Register = () => {
                .then(() => {
                  toast.success("SignUp successfully");
                  //save user to DB //api/auth.js
-                 saveUser(result.user);
+                //saveUser(result.user);
+                navigate(from, { replace: true });
                })
                .catch((err) => {
                  setLoading(false);
